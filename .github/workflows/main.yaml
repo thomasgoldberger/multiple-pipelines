@@ -12,7 +12,7 @@ on:
 jobs:
  test-cafe:
    uses:
-     github.com/thomasgoldberger/testcafe/tree/main/.github/workflows/main.yaml@main
+     thomasgoldberger/testcafe/tree/main/.github/workflows/main.yaml@main
     
   # playwright-test:
   #   uses:
