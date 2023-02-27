@@ -31,6 +31,5 @@ jobs:
   test-cafe-run:
     uses: thomasgoldberger/testcafe/.github/workflows/main.yaml@main
 
-  # playwright-test:
-  #   uses:
-  #     DigitalRetailing/dr-ui-automation-test/.github/workflows/smoke.yml@US1015087_DDC
+  playwright-test:
+    uses: thomasgoldberger/playwright/.github/workflows/main.yaml@main
