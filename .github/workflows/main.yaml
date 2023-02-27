@@ -18,6 +18,7 @@ jobs:
       with:
         repository: thomasgoldberger/testcafe
         path: main
+      run: ls -a
   
   test-cafe-run:
     name: Run end-to-end test with test_e2e_testcafe
@@ -26,7 +27,13 @@ jobs:
       - uses: actions/setup-node@v3
 
       - name: Install testcafe dependencies
-        run: npm install -g testcafe
+        run: |
+            ls -a
+            cd /home/runner/work/multiple-pipelines/multiple-pipelines/main
+               
+            ls -a 
+            npm install -g testcafe
+        
         working-directory: main
 
       - name: Run tests headless
