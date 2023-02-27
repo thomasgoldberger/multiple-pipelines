@@ -11,8 +11,7 @@ on:
 
 jobs:
  test-cafe:
-   uses:
-     thomasgoldberger/testcafe/tree/main/.github/workflows/main.yaml@main
+   uses: ./testcafe/tree/main/.github/workflows/main.yaml@main
     
   # playwright-test:
   #   uses:
