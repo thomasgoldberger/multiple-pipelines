@@ -1,0 +1,19 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 0 22 * * 1,2,3,4,5
+
+jobs:
+ test-cafe:
+   uses:
+     github.com/thomasgoldberger/testcafe/tree/main/.github/workflows/main.yaml@main
+    
+  # playwright-test:
+  #   uses:
+  #     DigitalRetailing/dr-ui-automation-test/.github/workflows/smoke.yml@US1015087_DDC
