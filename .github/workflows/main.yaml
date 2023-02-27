@@ -27,12 +27,12 @@ jobs:
 
       - name: Install testcafe dependencies
         run: npm install -g testcafe
-        working-directory: ./main
+        working-directory: main
 
       - name: Run tests headless
         run:  testcafe "chrome:headless" ./examples/basic/test.js
-        working-directory: ./main
-        
+        working-directory: main
+
   # playwright-test:
   #   uses:
   #     DigitalRetailing/dr-ui-automation-test/.github/workflows/smoke.yml@US1015087_DDC
