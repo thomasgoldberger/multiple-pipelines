@@ -26,15 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: thomasgoldberger/testcafe
+          path: main
 
       - name: Install testcafe dependencies
-        run: |
-            ls -a
-            cd /home/runner/work/multiple-pipelines/multiple-pipelines/main
-               
-            ls -a 
-            npm install -g testcafe
-        
+        run: npm install -g testcafe
         working-directory: main
 
       - name: Run tests headless
