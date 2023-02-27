@@ -10,35 +10,26 @@ on:
     - cron: 0 22 * * 1,2,3,4,5
 
 jobs:
-  test-cafe-checkout:
-    runs-on: ubuntu-latest
-    steps: 
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        repository: thomasgoldberger/testcafe
-        path: main
-    - name: ls
-      run: ls -a
-  
+  # test-cafe-run:
+  #   name: Run end-to-end test with test_e2e_testcafe
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/setup-node@v3
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         repository: thomasgoldberger/testcafe
+  #         path: main
+
+  #     - name: Install testcafe dependencies
+  #       run: npm install -g testcafe
+  #       working-directory: main
+
+  #     - name: Run tests headless
+  #       run:  testcafe "chrome:headless" ./examples/basic/test.js
+  #       working-directory: main
   test-cafe-run:
-    name: Run end-to-end test with test_e2e_testcafe
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          repository: thomasgoldberger/testcafe
-          path: main
-
-      - name: Install testcafe dependencies
-        run: npm install -g testcafe
-        working-directory: main
-
-      - name: Run tests headless
-        run:  testcafe "chrome:headless" ./examples/basic/test.js
-        working-directory: main
+    uses: thomasgoldberger/testcafe/.github/workflows/main.yaml@main
 
   # playwright-test:
   #   uses:
