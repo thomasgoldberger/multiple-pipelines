@@ -18,6 +18,7 @@ jobs:
       with:
         repository: thomasgoldberger/testcafe
         path: main
+    - name: ls
       run: ls -a
   
   test-cafe-run:
