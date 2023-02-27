@@ -15,7 +15,7 @@ jobs:
     steps: 
     - name: Checkout
       uses: actions/checkout@v2
-    - uses: thomasgoldberger/testcafe
+    - uses: thomasgoldberger/testcafe@main
   
   test-cafe-run:
     uses: thomasgoldberger/testcafe/.github/workflows/main.yaml@main
